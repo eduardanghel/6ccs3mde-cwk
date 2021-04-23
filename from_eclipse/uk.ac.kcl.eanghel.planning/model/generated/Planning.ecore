@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="planning" nsURI="http://www.ac.uk/kcl/eanghel/planning/Planning"
+    nsPrefix="planning">
+  <eClassifiers xsi:type="ecore:EClass" name="TaskPlanning">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owners" upperBound="-1"
+        eType="#//Owner" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projs" upperBound="-1"
+        eType="#//Project" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" upperBound="-1"
+        eType="#//Tasks" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Owner">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tasks">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskType" eType="#//TaskType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" unique="false" upperBound="-1"
+        eType="#//Owner"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="points" eType="#//Points"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//Status"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="proj" unique="false" upperBound="-1"
+        eType="#//Project"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Points">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureTask" eSuperTypes="#//TaskType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BugTask" eSuperTypes="#//TaskType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bug" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnalyseTask" eSuperTypes="#//TaskType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="analyse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestTask" eSuperTypes="#//TaskType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="test" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentTask" eSuperTypes="#//TaskType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeployTask" eSuperTypes="#//TaskType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deploy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Status">
+    <eLiterals name="STUCK" literal="Stuck"/>
+    <eLiterals name="PROGRESS" value="1" literal="In Progress"/>
+    <eLiterals name="DONE" value="2" literal="Done"/>
+    <eLiterals name="REVIEW" value="3" literal="Waiting for review"/>
+  </eClassifiers>
+</ecore:EPackage>

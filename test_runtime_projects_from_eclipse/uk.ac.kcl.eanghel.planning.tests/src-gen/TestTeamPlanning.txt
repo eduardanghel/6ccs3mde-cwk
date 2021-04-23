@@ -1,0 +1,12 @@
+Planning session for team TestTeam.
+Team stakeholders: 
+	TestOwner,
+
+Tasks planned in the session: 
+
+0. Test the 'Planning MDE': 
+	 owned by TestOwner
+	 worth 8 Story Points.
+	 status: In Progress.
+	 defined in the project TestProject.
+

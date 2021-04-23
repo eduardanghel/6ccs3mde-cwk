@@ -1,0 +1,56 @@
+grammar uk.ac.kcl.eanghel.planning.Planning with org.eclipse.xtext.common.Terminals
+
+generate planning "http://www.ac.uk/kcl/eanghel/planning/Planning"
+
+TaskPlanning: 
+	'Team' name=ID
+	'Owners' owners += Owner+ 
+	'Projects' projs += Project+ 
+	tasks += Tasks*
+;
+
+Owner: name=ID;
+
+Project: name=ID;
+
+
+Tasks:
+	'Task' taskType = TaskType 
+	'owner' owner+=[Owner]+
+	'priority' priority=INT
+	'points' points=Points
+	'status' status=Status
+	'project' proj+=[Project]+
+;
+
+Points:
+	value=INT
+;
+
+TaskType:
+	FeatureTask						|
+	BugTask							|
+	AnalyseTask						|
+	TestTask						|
+	DocumentTask					|
+	DeployTask
+;
+
+FeatureTask: 'Feature' feat=STRING;
+
+BugTask: 'Bug' bug=STRING;
+
+AnalyseTask: 'Analyse' analyse=STRING;
+
+TestTask: 'Test' test=STRING;
+
+DocumentTask: 'Document' doc=STRING;
+
+DeployTask: 'Deploy' deploy=STRING;
+
+enum Status:
+	STUCK='Stuck' 				|
+	PROGRESS='In Progress' 	|
+	DONE='Done' 				|
+	REVIEW='Waiting for review'
+;

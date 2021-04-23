@@ -1,0 +1,48 @@
+Planning session for team KCL.
+Team stakeholders: 
+	Eduar,	Eduard,	Julian,	Stefania,
+
+Tasks planned in the session: 
+
+0. Document the 'Report': 
+	 owned by Eduard, Julian
+	 worth 89 Story Points.
+	 status: Stuck.
+	 defined in the projects MDE, IND.
+
+1. Test the 'Finish tests': 
+	 owned by Eduard, Julian, Stefania
+	 worth 8 Story Points.
+	 status: Done.
+	 defined in the project MDE.
+
+2. Fix the bug 'Scheduler not working properly': 
+	 owned by Eduard
+	 worth 2 Story Points.
+	 status: In Progress.
+	 defined in the project IND.
+
+3. Deploy the 'Deploy': 
+	 owned by Julian
+	 worth 1 Story Points.
+	 status: In Progress.
+	 defined in the project MDE.
+
+4. Analyse 'Data from experiments': 
+	 owned by Stefania
+	 worth 8 Story Points.
+	 status: In Progress.
+	 defined in the project NSE.
+
+5. Implement the feature 'GDPR Compliance - automatic user data retrieval': 
+	 owned by Eduard
+	 worth 13 Story Points.
+	 status: Stuck.
+	 defined in the project IND.
+
+6. Test the 'Rouge evaluation': 
+	 owned by Eduard
+	 worth 8 Story Points.
+	 status: Done.
+	 defined in the project IND.
+

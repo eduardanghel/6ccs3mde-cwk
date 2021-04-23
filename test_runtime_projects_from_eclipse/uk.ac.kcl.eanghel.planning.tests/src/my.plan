@@ -1,0 +1,59 @@
+Team KCL
+Owners Eduar Eduard Julian Stefania
+Projects MDE IND NSE
+
+Task 
+	Document "Report" 
+	owner Eduard Julian
+	priority 2
+	points 89
+	status Stuck
+	project MDE IND
+	
+Task
+	Test "Finish tests"
+	owner Eduard Julian Stefania
+	priority 7
+	points 8
+	status Done
+	project MDE
+	
+Task
+	Bug "Scheduler not working properly"
+	owner Eduard
+	priority 8
+	points 2
+	status In Progress
+	project IND
+
+Task 
+	Deploy "Deploy"
+	owner Julian
+	priority 2
+	points 1
+	status In Progress
+	project MDE
+
+Task
+	Analyse "Data from experiments"
+	owner Stefania
+	priority 10
+	points 8
+	status In Progress
+	project NSE
+
+Task
+	Feature "GDPR Compliance - automatic user data retrieval"
+	owner Eduard
+	priority 10
+	points 13
+	status Stuck
+	project IND
+	
+Task
+	Test "Rouge evaluation"
+	owner Eduard
+	priority 10
+	points 8
+	status Done
+	project IND

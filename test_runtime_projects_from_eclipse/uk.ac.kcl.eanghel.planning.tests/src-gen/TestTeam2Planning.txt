@@ -1,0 +1,12 @@
+Planning session for team TestTeam2.
+Team stakeholders: 
+	Pop,
+
+Tasks planned in the session: 
+
+0. Implement the feature 'Implement 2FA': 
+	 owned by Pop
+	 worth 8 Story Points.
+	 status: Done.
+	 defined in the project PName.
+

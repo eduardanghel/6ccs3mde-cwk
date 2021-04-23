@@ -1,0 +1,10 @@
+Team TestTeam
+Owners TestOwner
+Projects TestProject
+Task
+	Test "Planning MDE"
+	owner TestOwner
+	priority 10
+	points 8
+	status In Progress
+	project TestProject
